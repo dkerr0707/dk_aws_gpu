@@ -16,7 +16,7 @@ int main(void) {
     std::vector<float> y(N, 1.25f);
 
     //Run the kernel with 1M elements on the cpu
-    add(N, &x[0], &y[0]);
+    add(N, x.data(), y.data());
 
     //Check for errors
     float maxError = 0.0f;
